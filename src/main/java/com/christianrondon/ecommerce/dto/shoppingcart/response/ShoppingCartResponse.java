@@ -1,13 +1,19 @@
 package com.christianrondon.ecommerce.dto.shoppingcart.response;
 
 import com.christianrondon.ecommerce.dto.cartitem.response.CartItemResponse;
-import java.math.BigDecimal;
+import com.christianrondon.ecommerce.entity.CartItem;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class ShoppingCartResponse {
-    private Long shoppingId;
+    private Long ShoppingCartId;
     private Long userId;
     private List<CartItemResponse> listItems;
-    private int totalItems;
-    private BigDecimal totalPrice;
+    private double totalPrice;
 }
